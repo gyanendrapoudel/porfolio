@@ -480,6 +480,37 @@ background-color: var(--third--);
     transform: scale(1.1);
      background-color: red;
 }
+/* footer */
+.footer{
+    background-color: black;
+    padding-bottom: 2rem;
+
+}
+.footer-content{
+    
+    padding-top: 2rem;
+    flex-wrap: wrap;
+    gap: 10rem;
+    align-items: start;
+   
+  
+}
+.footer-content>div>span{
+    font-size: 20px;
+    text-transform: capitalize;
+    text-decoration: underline;
+    
+  
+   
+}
+.footer-content li{
+    margin-top: 3px;
+    list-style: none;
+}
+.footer-content a{
+    text-decoration: none;
+} 
+
 @media (max-width:550px) {
     .right-section{
         display: none;
