@@ -13,9 +13,16 @@
     --display-none:none;
     --display:var(--display-none);
     --display-block:block;
+    --transition--: all 0.5s;
+    --transition2--: all 0.6s;
+   
+   
     
 
     
+}
+html{
+    scroll-behavior: smooth;
 }
 body{
     margin: 0px;
@@ -45,7 +52,7 @@ a{
     color: white;
     box-shadow: var(--shadow--);
     cursor: pointer;
-    transition: all 0.3;
+    transition: all 0.3s;
 }
 .btn:hover{
   transform: scale(1.1);
@@ -83,9 +90,10 @@ a{
 header{
     background-color:var(--primary--) ;
     box-shadow: var(--shadow1--);
-    /* position: sticky;
-    top:10px;
-    z-index: 100; */
+    position: sticky;
+    top:0px;
+    z-index: 100;
+   
 }
 .heading{
     height: 50px;
@@ -126,7 +134,18 @@ header{
     display: none;
     text-align: center;
     position: relative;
+  
    
+   
+    
+}
+.hamburger i{
+    cursor: pointer;
+    
+}
+.hamburger li{
+    list-style: none;
+    margin-top: 1rem;
     
 }
 
@@ -142,18 +161,24 @@ header{
     display: none;
 }
 .hamburger-menu{
-   display: var(--display-none);
    position: absolute;
-   top:10px;
-   right: 20px;
+   top:18px;
+   right:-400px;
+   height: 50vh;
+   width: 200px;
    background-color:var(--primary--) ;
-   z-index: 200;
    padding-left: 0px;
-   border-radius: 10px;
+   background-color:var(--primary--);
+   transition: all 0.5s;
+  flex-direction: column;
+  justify-content: flex-start
+  
    
 }
+
+
 #hamburger:checked + .hamburger-menu {
-    --display-none:block;
+    right: -40px;
 }
 
 /* dark mode */
@@ -162,7 +187,7 @@ header{
     position: fixed;
     top:4rem;
     left: 20px;
-      color: var(--secondary--);
+     color: var(--secondary--);
 
 }
 [for="darkMode"]:hover{
@@ -181,8 +206,10 @@ header{
   --third--:var(--dark-mode-bg--);
 }
 /* about-me */
+
 .about-me{
-    padding: 20px 30px ;
+    padding: 0 30px ;
+    padding-top: 40px;
     margin-top: 5rem;
     position: relative;
     background-color: rgba(236, 43, 43, 0.806);
@@ -212,7 +239,7 @@ header{
 .experiece{
     gap:10px;
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     border: 1px solid rgba(128, 128, 128, 0.715);
     border-radius: 20px;
     box-shadow: 0px 0px 10px 2px rgb(210, 208, 208);
@@ -252,7 +279,8 @@ header{
 
 /* skills */
 .skill{
-   margin-bottom: 5rem;
+    padding-top: 45px;
+   margin-bottom: 2rem;
 }
 .skill-text{
     justify-content: center;
@@ -296,6 +324,7 @@ text-decoration: underline;
 }
 /* hero -section */
 .hero{
+    padding-top: 40px;
     margin-bottom: 2rem;
 }
 .hero h4{
@@ -308,6 +337,7 @@ text-decoration: underline;
     text-decoration: underline;
     text-decoration-color: red;
     text-underline-offset: 0.5em;
+    margin-bottom: 4rem;
 
 }
 .projects{
@@ -347,6 +377,7 @@ text-decoration: underline;
 .profile{
     
 background-color: var(--third--);
+padding-top:20px;
 
 }
 .profile-text{
@@ -423,7 +454,7 @@ background-color: var(--third--);
 }
 /* contact me */
 .contact{
-    margin-top: 2rem ;
+    /* margin-top: 2rem ; */
     margin-bottom: 3rem;
   
 }
@@ -492,6 +523,7 @@ background-color: var(--third--);
     flex-wrap: wrap;
     gap: 10rem;
     align-items: start;
+    margin-bottom: 2rem;
    
   
 }
@@ -510,6 +542,21 @@ background-color: var(--third--);
 .footer-content a{
     text-decoration: none;
 } 
+/* go-up arrow */
+.go-up{
+    font-size: 30px;
+    color: red;
+    position: fixed;
+    top:90vh;
+    right: 20px;
+    padding: 0.3rem;
+    font-weight: bolder;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+
+    
+}
 
 @media (max-width:550px) {
     .right-section{
