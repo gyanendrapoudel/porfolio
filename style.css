@@ -28,6 +28,7 @@ body{
     margin: 0px;
     color:white;
     font-family: Roboto, Arial;
+    overflow-x: hidden;
 
 
 }
@@ -69,6 +70,7 @@ a{
 .wrapper{
     background-color: var(--primary--);
     color: white;
+    overflow-x: hidden;
 
 
 }
@@ -591,6 +593,11 @@ padding-top:20px;
    }
    .profile-content{
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+   .profile-content img{
+    width: 60%;
    }
     }
 
