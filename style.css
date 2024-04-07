@@ -627,5 +627,8 @@ padding-left: 20px;
      align-items: center;
      gap:2rem;
    }
+   .footer-right-section{
+     text-align:  center;
+   }
     }
 
